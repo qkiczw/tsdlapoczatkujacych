@@ -1,7 +1,10 @@
 "use strict";
 {
-    class Rectangle {
+    class Shape {
+    }
+    class Rectangle extends Shape {
         constructor(a, b) {
+            super();
             this.area = () => {
                 return this.a * this.b;
             };
@@ -12,14 +15,27 @@
     class Square extends Rectangle {
         constructor(a) {
             super(a, a);
-            this.toString = () => {
-                return `Jestem kwadratem o boku ${this.a}`;
+            this.area = () => {
+                return this.a * this.a;
+            };
+            this.toStr = () => {
+                return `Jestem kwadratem o boku ${super.area()}`;
             };
         }
     }
-    let prostokat = new Rectangle(10, 5);
-    let kwadrat = new Square(5);
-    console.log(prostokat.area());
-    console.log(kwadrat.area());
-    console.log(kwadrat.toString());
+    class Circle extends Shape {
+        constructor(r) {
+            super();
+            this.area = () => {
+                return this.radius * this.radius * Math.PI;
+            };
+            this.radius = r;
+        }
+    }
+    const cos = new Circle(5);
+    cos.area();
+    const something = new Square(10);
+    something.area();
+    const prostokat = new Rectangle(5, 10);
+    prostokat.area();
 }
