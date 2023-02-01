@@ -7,3 +7,7 @@ const showUserAge = (userName, userAge) => {
     return `The ${userName} age is ${userAge}`;
 };
 console.log(showUserAge('Maciej', 38));
+function printSomething(str) {
+    console.log(str);
+}
+printSomething('Something apears on the screen!');

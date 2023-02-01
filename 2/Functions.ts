@@ -9,3 +9,11 @@ const showUserAge = (userName : string , userAge : number) : string => {
 }
 
 console.log(showUserAge('Maciej', 38));
+
+
+
+
+function printSomething ( str : string ) : void {
+    console.log(str);
+}
+printSomething('Something apears on the screen!');

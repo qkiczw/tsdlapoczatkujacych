@@ -24,6 +24,12 @@ function testFn(numA : number, numB : number) : number {
     return numA + numB
 }
 ```
+In function that returns nothing (e.g print something in the browser console) you should use "void" type.
+```
+function printSomething(str : string) : void {
+    console.log("something");
+}
+```
 
 ###Union Types
 You can use couple different types of types declare in one variable (It is better than the any type)
@@ -31,4 +37,16 @@ You can use couple different types of types declare in one variable (It is bette
 (You must use the OR operator known from if statements in JavaScript)
 ```
 let userAge : number | string;
+```
+
+### How to Check basic types
+You can use "typeof" and check is variable is "string", "number", "boolean" or "any".
+**An example**
+```
+const userID = 1234
+
+if(typeof userID === "number") {
+    console.log('userID is a number')
+}
+
 ```
