@@ -3,18 +3,18 @@
 - npx tsc --watch - this command runs a watch option and automatically compile all changes made in ts files 
 - npx nodemon ./file.ts - it starts a file automatically after a compilation (first install nodemon via npm)
 
-##TYPES
-###Basic Types:
+## TYPES
+### Basic Types:
 - variable : string - declare only a text in "",'' and ``(ES6 string templates)
 - variable : number - declare only a numbers
 - variable : boolean - declare only a true or false statement
 - variable : any - declare everything (strings, numbers, objects, arrays, functions)()
 
-###Arrays Types:
+## Arrays Types:
 - variable : number[] = [] - declare only an array with numbers
 - variable : string[] = [] - declare only an array with strings
 
-###Functions:
+## Functions:
 In functions you must declare types of parameters, and after brackets you have to declare what type of data the functions returns.
 
 **An example:**
@@ -31,7 +31,7 @@ function printSomething(str : string) : void {
 }
 ```
 
-###Union Types
+## Union Types
 You can use couple different types of types declare in one variable (It is better than the any type)
 **An example:**
 (You must use the OR operator known from if statements in JavaScript)
@@ -39,7 +39,7 @@ You can use couple different types of types declare in one variable (It is bette
 let userAge : number | string;
 ```
 
-### How to Check basic types
+## How to Check basic types
 You can use "typeof" and check is variable is "string", "number", "boolean" or "any".
 **An example**
 ```
@@ -51,7 +51,7 @@ if(typeof userID === "number") {
 
 ```
 
-###Aliases
+## Aliases
 You can create your own types.
 **An example**
 ```
@@ -65,7 +65,7 @@ const fromOneToThree : rightNumbers = 3 // its only allow numbers from 1 to 3
 
 ```
 
-###Typing Objects
+## Typing Objects
 You can properly type an object by declare all needed types in brackets {}. Object also can have an optional type "?:" which allows to declare an object with or without the optional type.
 **An example**
 ```
