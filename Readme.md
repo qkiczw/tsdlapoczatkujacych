@@ -50,3 +50,29 @@ if(typeof userID === "number") {
 }
 
 ```
+
+###Aliases
+You can create your own types.
+**An example**
+```
+type addressTypes = number | string;
+const address : addressTypes = "Sopot, Grunwaldzka 12"
+
+or
+
+type rightNumbers = 1|2|3
+const fromOneToThree : rightNumbers = 3 // its only allow numbers from 1 to 3 
+
+```
+
+###Typing Objects
+You can properly type an object by declare all needed types in brackets {}. Object also can have an optional type "?:" which allows to declare an object with or without the optional type.
+**An example**
+```
+const carObj : {company : string, model : string, year : number, diesel ?: boolean } = {
+ "company" : "Ford",
+ "model" : "Focus",
+ "year" : 2004,
+ "diesel" : true // an optional type
+}
+```
