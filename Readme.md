@@ -1,4 +1,4 @@
-##Usefull commands
+## Usefull commands
 - npx tsc - compile all ts files in the directory
 - npx tsc --watch - this command runs a watch option and automatically compile all changes made in ts files 
 - npx nodemon ./file.ts - it starts a file automatically after a compilation (first install nodemon via npm)
@@ -75,4 +75,25 @@ const carObj : {company : string, model : string, year : number, diesel ?: boole
  "year" : 2004,
  "diesel" : true // an optional type
 }
+```
+
+## Interfaces
+An interface is like a blueprint for an object. Rather than declare every time the same type of an object you can create one interface and declare it to the objects with the same structure. You can also declare a couple intrefaces to one object using OR or AND. 
+**An example**
+```
+interface Car {
+    "mark" : string,
+    "model" : string,
+    "year" : number,
+    "diesel" ?: boolean
+}
+
+const FordFocus : Car = {
+    "mark" : "Ford",
+    "model" : "Focus",
+    "year" : 2004,
+    "diesel" : true
+}
+
+
 ```
