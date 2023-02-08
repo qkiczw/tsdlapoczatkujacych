@@ -65,3 +65,60 @@ sendEmailsToWorkers([worker01, worker02, worker03]);
     }
 
 }
+
+
+// Composing an interface
+{
+    
+interface Address {
+    city : string,
+    street : string,
+    postCode: number
+
+}
+
+interface GeoData {
+    adress: Address,
+    longitude : number,
+    latitude : number,
+}
+
+const myAdress = {
+    "adress" : {
+        "city" : "Black Water City",
+        "street" : "Main street",
+        "postCode" : 22
+    },
+    "longitude" : 33,
+    "latitude" : 45,
+}
+
+console.log(myAdress)
+}
+
+// Extending an interface
+
+{
+    interface Worker {
+    "name" : string,
+    "age" : number,
+    "id" : number,
+    "email" ?: string
+}
+
+interface TeamManager extends Worker {
+    "companyPhone" : number,
+    "companyCar" : Boolean
+}
+
+const andyTheManager : TeamManager = {
+    "name" : "Andy Tarkowsky",
+    "age" : 35,
+    "id" : 1234,
+    "email" : "andy@worker.co",
+    "companyPhone" : 55555333,
+    "companyCar" : true
+}
+
+    console.log(andyTheManager)
+}

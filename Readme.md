@@ -97,3 +97,59 @@ const FordFocus : Car = {
 
 
 ```
+
+## Composition of types
+You can compose a interface with other interfaces inside the main one.
+**An example**
+```
+interface Address {
+    city : string,
+    street : string,
+    postCode: number
+
+}
+
+interface GeoData {
+    adress: Address,
+    longitude : number,
+    latitude : number,
+}
+
+const myAdress = {
+    "adress" : {
+        "city" : "Black Water City",
+        "street" : "Main street",
+        "postCode" : 22
+    },
+    "longitude" : 33,
+    "latitude" : 45,
+}
+
+```
+
+## Extending interfaces
+You can create a new interface extending another one using word "extends"
+**An Example**
+``
+interface Worker {
+    "name" : string,
+    "age" : number,
+    "id" : number,
+    "email" ?: string
+}
+
+interface TeamManager extends Worker {
+    "companyPhone" : number,
+    "companyCar" : Boolean
+}
+
+const andyTheManager : TeamManager = {
+    "name" : "Andy Tarkowsky",
+    "age" : 35,
+    "id" : 1234,
+    "email" : "andy@worker.co",
+    "companyPhone" : 55555333,
+    "companyCar" : true
+}
+
+``

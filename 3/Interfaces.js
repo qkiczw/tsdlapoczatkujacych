@@ -35,3 +35,28 @@ sendEmailsToWorkers([worker01, worker02, worker03]);
         "companyPhone": false
     };
 }
+// Composing an interface
+{
+    const myAdress = {
+        "adress": {
+            "city": "Black Water City",
+            "street": "Main street",
+            "postCode": 22
+        },
+        "longitude": 33,
+        "latitude": 45,
+    };
+    console.log(myAdress);
+}
+// Extending an interface
+{
+    const andyTheManager = {
+        "name": "Andy Tarkowsky",
+        "age": 35,
+        "id": 1234,
+        "email": "andy@worker.co",
+        "companyPhone": 55555333,
+        "companyCar": true
+    };
+    console.log(andyTheManager);
+}
