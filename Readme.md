@@ -130,7 +130,7 @@ const myAdress = {
 ## Extending interfaces
 You can create a new interface extending another one using word "extends"
 **An Example**
-``
+```
 interface Worker {
     "name" : string,
     "age" : number,
@@ -152,11 +152,11 @@ const andyTheManager : TeamManager = {
     "companyCar" : true
 }
 
-``
+```
 
 ## Class declaratrion
 **An example**
-``
+```
 
 class WorkStation {
 
@@ -189,4 +189,33 @@ class WorkStation {
 
 const developer =  new WorkStation("AMD", "RYZEN 5", 16, true, "Windows 10");
 
-``
+```
+
+## Public and Private Properties of a Class
+You can set a private and public properties in a Class using words private or public before a property.
+**An example**
+```
+class Person {
+    
+    public name : string;
+    public age : number;
+    private gender : string
+
+    
+    constructor(name : string, age : number, gender : string) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    };
+
+    showInfo = () : string => {
+        return `Name: ${this.name}, Age: ${this.age}`
+    }
+}
+
+const lukasz = new Person("Lukasz", 41, "straight")
+
+lukasz.age = 50; // It will be changed becasue the property is public and you can use it beyond the class
+lukasz.gender = gay; //It will not be changed because the property is private, it can only be used in the class where it was created.
+
+```
