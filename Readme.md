@@ -219,3 +219,41 @@ lukasz.age = 50; // It will be changed becasue the property is public and you ca
 lukasz.gender = gay; //It will not be changed because the property is private, it can only be used in the class where it was created.
 
 ```
+
+## Extend a Class
+
+**An example**
+```
+
+class Worker {
+
+        public name : string;
+        public lastName : string;
+        public age : number;
+       
+
+        constructor(name : string, lastName : string, age : number) {
+            this.name = name;
+            this.lastName = lastName
+            this.age = age
+        }
+        public showInfo = () : string => {
+            return `Worker info: ${this.name} ${this.lastName}. Age: ${this.age}.`
+        }
+    }
+
+    class Director extends Worker {
+
+        phone : number
+
+        constructor(name : string , lastName : string, age: number,  phone : number ) {
+            super( name, lastName , age)
+            this.phone = phone;
+        }
+        showDirectorInfo() {
+            return `My name is ${ this.name} ${this.lastName}. I am ${this.age} , and this is my phone number: ${this.phone} `
+        }
+
+    }
+
+```
