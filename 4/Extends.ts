@@ -34,4 +34,41 @@
 
     console.log(mainDirector.showInfo())
 
+
+    class Car {
+        
+        protected mark : string;
+        protected model : string;
+
+        constructor( mark : string, model : string) {
+            this.mark = mark;
+            this.model = model;
+        }
+
+        public showCarInfo = () : string => {
+            return `Car info: ${this.mark} ${this.model}`
+        }
+    
+    }
+    const ford = new Car('Ford', 'Focus');
+    console.log(ford.showCarInfo());
+
+    class Truck extends Car {
+
+        private trailer : boolean
+
+        constructor( mark: string, model: string, trailer : boolean) {
+            super( mark, model)
+
+            this.trailer = trailer;
+
+        }
+        public showTruckInfo = () => {
+            return `Truck info: ${this.mark}, ${this.model}, trailer: ${this.trailer ? "Yes" : "No"}`
+        }
+    }
+   const scania = new Truck('scania', 'costam', true);
+   console.log(scania.showTruckInfo())
+    
+    
 }
